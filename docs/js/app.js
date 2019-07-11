@@ -14,26 +14,26 @@ window.app = new Vue({
         addToCart() {
             this.cartcount++;
         },
-        onGeometryLoaded: function() {
-            viewer.impl.skipAOWhenMoving = true;
-            viewer.setGroundShadow(false);
-        },
 
         onViewerLoaded: function() {
             with(viewer) {
-                loadExtension("Autodesk.LayerManager");
+                loadExtension("Autodesk.LayerManager"); // only works for DWG files, not F3D
+                container.style.cssText = ""; // hides the toolbar
+                setBackgroundColor(255, 255, 255, 255, 255, 255); // change the background to white
+                autocam.shotParams.destinationPercent = 3;  // slow down camera transitions
+                autocam.shotParams.duration = 3;
+                addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, () => {
+                    setGroundShadow(false);
+                    impl.skipAOWhenMoving = true;
+                });
+                // when camera moves, stop the transitions.
                 canvas.addEventListener('mousedown', (e => this.mousemoved = true));
                 canvas.addEventListener('mousewheel', (e => this.mousemoved = true));
-                container.style.cssText = "";
-                setBackgroundColor(255, 255, 255, 255, 255, 255);
-                autocam.shotParams.destinationPercent = 3;
-                autocam.shotParams.duration = 3;
             }
-            addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, this.onGeometryLoaded);
+            window.addEventListener("resize", this.onResize);
+            this.onResize();
             this.setView(0);
             this.addBackdrop();
-            this.onResize();
-            window.addEventListener("resize", this.onResize);
         },
 
         init: function() {
