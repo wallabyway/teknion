@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Teknion chair</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=7.*" type="text/css">
+    <link rel="stylesheet" href="js/skeleton.min.css" type="text/css">
+  </head>
+
+<body onload="app.init();" style="margin:0;overflow:hidden">
+
+<div id="app">
+<div class="container">
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><img class="navbar-img" src="img/logo.jpg"/></li>
+          <li class="navbar-itemr"><a class="navbar-link"><i class="demo-icon icon-basket-1"/></i>{{cartcount}}</a></li>
+          <li class="navbar-itemr"><a class="navbar-link" href="https://github.com/wallabyway/teknion"><i class="demo-icon icon-user-1"/></i></a></li>
+          <li class="navbar-itemr"><a class="navbar-link" href="https://teknionstore.com/collections/products/products/around-mesh-task-chair-ebony-frame-finish?variant=11789295026291"><i class="demo-icon icon-search"/></i></a></li>
+          <li class="navbar-itemr"><a class="navbar-link" href="#contact">United States<i class="demo-icon icon-down-dir"/></i></a></li>
+          <li class="navbar-itemr"><a class="navbar-link" href="#contact">Contact Us</a></li>
+          <li class="navbar-itemr"><a class="navbar-link" href="#products">Products</a></li>
+          <li class="navbar-itemr"><a class="navbar-link" href="#home">Home</a></li>
+          <!-- spacer -->
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+<!-- Forge Viewer -->
+  <div id="forgeViewer" ></div>
+
+
+<!-- Sidebar -->
+  <div class="configPanel">
+    <h5>Task Chair</h5>
+    <label>QUANTITY</label>
+    <button style="line-height:1px">+ 0 -</button>
+    <ul> 
+    <label>Frame Color</label>
+      <li class="colorbar"><button v-for="item,i in frameList" v-bind:class="{active: frame==i}" v-bind:style="{ backgroundColor: item.rgb }" v-bind:title="item.title" @click="setFrame(item.rgb, item.cost);frame=i;setView(2);mousemoved=true;"/></li>
+    <label>Fabric Color</label>
+      <li class="colorbar"><button v-for="item,i in fabricList" v-bind:class="{active: fabric==i}" v-bind:style="{ backgroundColor: item.rgb }" v-bind:title="item.texture" @click="setFabric(item.texture, item.cost);fabric=i;setView(1);mousemoved=true;"/></li>
+    <h4>${{this.cost}}.0</h4>
+    <a class="button button-primary" @click="addToCart()" style="background-color: #666; border-color: #666" href="#">Add to Cart</a>
+
+      <li class="viewbar"><button v-for="item,i in cameraViewList" v-bind:title="'Camera#'+i" v-bind:class="{ active: (viewstate==i) }"@click="setView(i);mousemoved=true;"></button></li>
+      </ul>
+  </div></div>
+</body>
+
+
+<script src="js/vue.min.js"></script>
+<script src="js/cameras.js"></script>
+<script src="js/configs.js"></script>
+<script src="js/materials.js"></script>
+<script src="js/app.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla" type="text/css">
+
+<!-- viewer -->
+  <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.js?v=v7.*"></script>
+</html>
