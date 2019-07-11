@@ -19,7 +19,7 @@ var materials = {
         },
 
         setDiffuseTexture: function(mat, textureName) {
-            mat.opaque_albedo_map = THREE.ImageUtils.loadTexture(`../../textures/${textureName}`, null, i => {
+            mat.opaque_albedo_map = THREE.ImageUtils.loadTexture(`textures/${textureName}`, null, i => {
                 viewer.impl.invalidate(true, true);
             });
             Object.assign(mat.opaque_albedo_map, {
@@ -46,7 +46,7 @@ var materials = {
                 if (matmgr._materials[textureName])
                     return; //material already exists
                 var cm, bm, rm, mn;
-                var textureFolder = "../../textures/";
+                var textureFolder = "textures/";
                 if (textureName.indexOf("fabric_wire") != -1) {
                     cm = `${textureFolder}${textureName}.png`;
                     bm = `${textureFolder}fabric_wire_bump.png`;
