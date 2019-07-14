@@ -15,6 +15,22 @@ var configs = {
             ],
 
             fabricList: [
+                {rgb:"#F0C68F", texture:"E107_Sunspot.jpg"},
+                {rgb:"#F0C68F", texture:"D326_Thistle Tweed.jpg"},
+                {rgb:"#F0C68F", texture:"D323_Raspite Tweed.jpg"},
+                {rgb:"#F0C68F", texture:"D322_Rose Tweed.jpg"},
+                {rgb:"#F0C68F", texture:"D318_Loden Tweed.jpg"},
+                {rgb:"#F0C68F", texture:"C239_Stone.jpg"},
+                {rgb:"#F0C68F", texture:"A165_Pascal.jpg"},
+                {rgb:"#F0C68F", texture:"A157_Holograph.jpg"},
+                {rgb:"#F0C68F", texture:"A143_Plated.jpg"},
+                {rgb:"#F0C68F", texture:"S160_Riverwalk.jpg"},
+                {rgb:"#F0C68F", texture:"P498_Crystal.jpg"},
+                {rgb:"#F0C68F", texture:"P501_Lazuli.jpg"},
+                {rgb:"#F0C68F", texture:"P502_Cinnabar.jpg"},
+            ],
+
+            fabricList_orig: [
                 {rgb:"#F0C68F", texture:"fabric_wire_light_brown.png"},
                 {rgb:"#707073", texture:"fabric_wire_grey_alpha.png"},
                 {rgb:"#4040D0", texture:"fabric_wire_denim.jpg"},
