@@ -16,8 +16,8 @@ python -m SimpleHTTPServer 8080
 ### Screenshots:
 
 ---
-**BLUE FABRIC SELECTED**
-![teknionjpg](https://user-images.githubusercontent.com/440241/61027626-833aae80-a36b-11e9-9420-5684828e630a.jpg)
+**PLAID RED FABRIC SELECTED**
+![patternfabric](https://user-images.githubusercontent.com/440241/61196417-63fd9300-a683-11e9-8332-9c09cf3747fd.jpg)
 
 ---
 
