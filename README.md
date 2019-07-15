@@ -46,7 +46,7 @@ A sample of the Teknion textures were supplied. The prism fabric normal and spec
 
 In order to use existing data, I tried creating a fake bump map from the supplied textures.  I used some off-the-shelf software called '[http://crazybump.com](http://crazybump.com)' to create a normal map from 'D326_Thistle Tweed.jpg'...
 
-![D326_Thistle Tweed.jpg](https://wallabyway.github.io/teknion/img/textures/D326_Thistle Tweed.jpg)
+![D326_Thistle Tweed.jpg](https://wallabyway.github.io/teknion/img/textures/D326_Thistle%20Tweed.jpg)
 ![D326-NRM.png](https://wallabyway.github.io/teknion/img/textures/D326-NRM.png)
 
 However, the results weren't so great.  I also need to create a specular map.
