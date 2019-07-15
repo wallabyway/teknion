@@ -6,6 +6,9 @@ window.app = new Vue({
 
 
     methods: {
+        getTitle: function(t) {
+            return t.slice(5,t.indexOf('.jpg'));
+        },
 
         onResize: function() {
             viewer.impl.resize(window.innerWidth - 310, window.innerHeight - 83);
