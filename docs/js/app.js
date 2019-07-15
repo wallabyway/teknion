@@ -20,6 +20,7 @@ window.app = new Vue({
                 loadExtension("Autodesk.LayerManager"); // only works for DWG files, not F3D
                 container.style.cssText = ""; // hides the toolbar
                 setBackgroundColor(255, 255, 255, 255, 255, 255); // change the background to white
+                disableHighlight(true);
                 autocam.shotParams.destinationPercent = 3;  // slow down camera transitions
                 autocam.shotParams.duration = 3;
                 addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, () => {
