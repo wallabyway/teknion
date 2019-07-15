@@ -8,7 +8,7 @@ window.app = new Vue({
     methods: {
 
         onResize: function() {
-            viewer.impl.resize(window.innerWidth - 310, window.innerHeight - 100);
+            viewer.impl.resize(window.innerWidth - 310, window.innerHeight - 83);
         },
 
         addToCart() {
