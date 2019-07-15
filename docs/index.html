@@ -43,9 +43,9 @@
     <button style="line-height:1px">+ 0 -</button>
     <ul> 
     <label>Frame Color</label>
-      <li class="colorbar"><button v-for="item,i in frameList" v-bind:class="{active: frame==i}" v-bind:style="{ backgroundColor: item.rgb }" v-bind:title="item.title" @click="setFrame(item.rgb, item.cost);frame=i;setView(3);mousemoved=true;"/></li>
+      <li class="framebar"><button v-for="item,i in frameList" v-bind:class="{active: frame==i}" v-bind:style="{ backgroundColor: item.rgb }" v-bind:title="item.title" @click="setFrame(item.rgb, item.cost);frame=i;setView(3);mousemoved=true;"/></li>
     <label>Fabric Color</label>
-      <li class="colorbar"><button v-for="item,i in fabricList" v-bind:class="{active: fabric==i}" v-bind:style="{ backgroundColor: item.rgb }" v-bind:title="item.texture" @click="setFabric(item.texture, item.cost);fabric=i;setView(1);mousemoved=true;"/></li>
+      <li class="fabricbar"><button v-for="item,i in fabricList" v-bind:class="{active: fabric==i}" v-bind:style="{ 'background-position-x' : -i*32 +'px' }" v-bind:title="item.texture" @click="setFabric(item.texture, item.cost);fabric=i;setView(1);mousemoved=true;"/></li>
     <h4>${{this.cost}}.0</h4>
     <a class="button button-primary" @click="addToCart()" style="background-color: #666; border-color: #666" href="#">Add to Cart</a>
 

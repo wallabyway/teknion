@@ -17,6 +17,10 @@ body {
 user-select: none;
 }
 
+.viewbar button{ padding:0 8px; height:23px; margin:2px; border-radius:20px; background-color:#ccc;}
+.viewbar button.active{ padding:0 8px; }
+.fabricbar button {background-image: url(contactsheet.jpg)}
+
 .vertical {
   height: calc(100vh - 26.4rem);
   max-height: 100%;
@@ -30,8 +34,8 @@ h5 {letter-spacing: 1px;}
   position: relative;
 }
 
-button {height:23px; margin:5px; border-radius:6px; padding:0 9px; border:3px solid #fff; box-shadow:0 0 1px }
-button.active {padding:0 9px; border:3px solid #fff; box-shadow:0 0 10px}
+button {height:32px; margin:1px; border-radius:6px; padding:0 16px; border:3px solid #fff; box-shadow:0 0 1px }
+button.active {padding:0 16px; border:3px solid #fff; box-shadow:0 0 10px}
 
 
 

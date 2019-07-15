@@ -7,7 +7,7 @@ var cameras = {
             // camera state
             viewstate: -1,
             mousemoved: false,
-            SWITCHVIEW_TIMER: 8000, //change camera every 5 seconds
+            SWITCHVIEW_TIMER: 7000, //change camera every 5 seconds
 
             // list of camera views
             cameraViewList: [
