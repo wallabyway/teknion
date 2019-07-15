@@ -37,3 +37,19 @@ python -m SimpleHTTPServer 8080
 
 Raw DWG file is accessible from the svf folder and the URN is commented out.  Need to check the UV's are in there.  If not, then we will need DA4CAD to add them back programmatically.
 
+
+## Teknion experiments:
+### Textures:
+A sample of the Teknion textures were supplied. The prism fabric normal and specular maps don't not exactly match, but they look ok from a distance.
+> fabric_wire_norm.png
+![fabric_wire_norm.png](https://wallabyway.github.io/teknion/img/textures/fabric_wire_norm.png)
+
+In order to use existing data, I tried creating a fake bump map from the supplied textures.  I used some off-the-shelf software called '[http://crazybump.com](http://crazybump.com)' to create a normal map from 'D326_Thistle Tweed.jpg'...
+
+![D326_Thistle Tweed.jpg](https://wallabyway.github.io/teknion/img/textures/D326_Thistle Tweed.jpg)
+![D326-NRM.png](https://wallabyway.github.io/teknion/img/textures/D326-NRM.png)
+
+However, the results weren't so great.  I also need to create a specular map.
+Given how laborious this is for previewing, I will instead perfect the look of the chair with this material using Fusion360 where I can better control the scale and bump and specular effect in real-time.
+
+
