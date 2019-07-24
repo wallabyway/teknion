@@ -1,0 +1,108 @@
+<head>
+  <meta charset="utf-8" />
+  <title>Test your Downloaded SVF</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="shortcut icon" href="#">
+  <style>
+#forgeViewer {
+  height: calc(100vh - 6.4rem);
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.item {
+  list-style: none;
+  margin:0;
+}
+
+.itemparent {
+  margin-top:0;
+  margin-bottom:0;
+}
+
+/* Navbar */
+  .navbar + .docs-section {
+    border-top-width: 0; }
+  .navbar {
+    display: block;
+    width: 100%;
+    height: 6.5rem;
+    background: #fff;
+    z-index: 99;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; }
+  .navbar > .container {
+    width: 100%; }
+  .navbar-list {
+    list-style: none;
+    margin-bottom: 0; }
+  .navbar-item {
+    position: relative;
+    float: left;
+    margin-bottom: 0; }
+  .navbar-img { margin: 16px 25 0 25 }
+  .navbar-itemr {
+    position: relative;
+    float: right;
+    margin-bottom: 0; }
+  .navbar-button {
+    margin-right: 20px;
+    margin-bottom: 0;
+    margin-top: 12px; }
+
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: #222; }
+  .navbar-link.active {
+    color: #33C3F0; } 
+</style>
+</head>
+
+
+<body onload="launchViewer()" style="margin:0; overflow-y: hidden;">
+
+  <div class="container">
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><img class="navbar-img" src="logo.png"/></li>
+          <li class="navbar-item"><button onClick="alert('dont forget to update the urn to your newly downloaded svf for testing.')" class="navbar-button">Help</button></li>
+          <li class="navbar-item"><button onClick="alert('if you see -Network Problem- message, then start a local server using... python -m SimpleHTTPServer and point your browser to localhost:8000')" class="navbar-button button-primary">Help 2</button></li>
+          <li class="navbar-item"><button onClick="resetView()" class="navbar-button">Close</button></li>
+          <li class="navbar-item mobile"><input class="navbar-button" id="level-slider" type="range" min="0" max="1" step="0.01" value="0" oninput="onSlider(value)"></li>
+
+          <li class="navbar-itemr"><button onClick="window.open('https://github.com/wallabyway/teknion')" class="navbar-button">Github</button></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div id="forgeViewer"></div>
+</body>
+
+<link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css?v=v7.*" type="text/css">
+<script language="JavaScript" src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js?v=v7.*"></script>
+</script>
+
+<script>
+  function launchViewer(urn) {
+  var options = { env: 'Local' };
+    var urn = 'svfs/dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLmw4RWdHaktqUUNDdUFaLWZpQk9LNUE_dmVyc2lvbj0xMw/output/0/1/Design.svf'
+
+  var viewer = new Autodesk.Viewing.Private.GuiViewer3D(document.getElementById('forgeViewer'), {});
+  Autodesk.Viewing.Initializer(options, function() {
+        viewer.start(urn, options, doc=>{});
+    });
+}
+
+</script>

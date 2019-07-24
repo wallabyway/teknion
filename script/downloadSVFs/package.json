@@ -1,0 +1,29 @@
+{
+  "name": "convertscripts",
+  "version": "1.0.0",
+  "description": "pulls svf files locally and prepares config xml",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wallabyway/teknion.git"
+  },
+  "keywords": [
+    "configurator"
+  ],
+  "author": "bealem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wallabyway/teknion/issues"
+  },
+  "homepage": "https://github.com/wallabyway/teknion#readme",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "form-data": "^2.5.0",
+    "node-fetch": "^2.6.0",
+    "node-zip": "^1.1.1",
+    "zlib": "^1.0.5"
+  }
+}

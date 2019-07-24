@@ -121,7 +121,6 @@ async function getURNs(urn, token) {
             return Object.assign({}, item, { files });
         });
         const urls = await Promise.all(derivatives);
-        console.log(JSON.stringify(urls));
         return urls;
     } catch (err) {
         console.log(err);
@@ -138,7 +137,7 @@ async function downloadUrns(derivatives, access_token, destFolder) {
     derivatives[0].files.unshift(`${derivatives[0].rootFileName}`);
     const baseFolder = destFolder + derivatives[0].urn.slice(25,derivatives[0].urn.lastIndexOf("/")+1);
     const rootFile = destFolder + derivatives[0].urn.slice(25);
-    console.log('rootFile'+rootFile);
+    console.log(`SVF File: ${rootFile}`);
 
     for (const derivative of derivatives) {
         const derivUrl = baseUrl + '/derivatives/' + encodeURIComponent(derivative.urn);
