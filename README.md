@@ -2,8 +2,12 @@
 
 **DEMO: https://wallabyway.github.io/teknion/**
 
+> see [scripts/README](scripts/README.md) instructions for details on how to automate SVF preparation and configs.
+
+
 ![patternfabric](https://user-images.githubusercontent.com/440241/61196417-63fd9300-a683-11e9-8332-9c09cf3747fd.jpg)
 **SCREENSHOT: TASK CHAIR WITH RED TWEED**
+
 
 ### Notes:
 1. all files hosted on github pages to demostrate 'self hosting'
