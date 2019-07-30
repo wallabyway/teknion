@@ -10,8 +10,8 @@ var configs = {
 
 
             frameList: [
-                {rgb:"#B5B5B5",cost:"640", title:"Gris"},
-                {rgb:"#BE988D",cost:"550", title:"Ebony"}
+                {rgb:"#B5B5B5", rgb2:"#040404", cost:"640", title:"Gris"},
+                {rgb:"#BE988D", rgb2:"#201D1A", cost:"550", title:"Ebony"}
             ],
 
             fabricList: [

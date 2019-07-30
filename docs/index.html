@@ -43,7 +43,7 @@
     <button style="line-height:1px">+ 0 -</button>
     <ul> 
     <label>Frame Color</label>
-      <li class="framebar"><button v-for="item,i in frameList" v-bind:class="{active: frame==i}" v-bind:style="{ backgroundColor: item.rgb }" class="tooltip" v-bind:title="item.title" @click="setFrame(item.rgb, item.cost);frame=i;setView(3);mousemoved=true;"/></li>
+      <li class="framebar"><button v-for="item,i in frameList" v-bind:class="{active: frame==i}" v-bind:style="{ backgroundColor: item.rgb }" class="tooltip" v-bind:title="item.title" @click="setFrame(item.rgb, item.rgb2, item.cost);frame=i;setView(3);mousemoved=true;"/></li>
     <label>Fabric Color</label>
       <li class="fabricbar"><button v-for="item,i in fabricList" v-bind:class="{active: fabric==i}" v-bind:style="{ 'background-position-x' : -i*32 +'px' }" class="tooltip" v-bind:title="getTitle(item.texture)" @click="setFabric(item.texture, item.cost);fabric=i;setView(1);mousemoved=true;"/></li>
     <h4>${{this.cost}}.0</h4>

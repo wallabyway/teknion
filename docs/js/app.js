@@ -53,7 +53,7 @@ window.app = new Vue({
                     env: "Local",
                     //placementTransform: (new THREE.Matrix4()).multiplyScalar(10)
                 }
-                //var urn = "svf/20550034-NSBYCNA_3ddwg/dwg.svf";
+            //var urn = "svf/20550034-NSBYCNA_3ddwg/dwg.svf";
             var urn = "svf/f3d/Design.svf";
             Autodesk.Viewing.Initializer(options, function() {
                 viewer.start(urn, options, self.onViewerLoaded);
