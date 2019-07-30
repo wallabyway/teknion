@@ -1,6 +1,7 @@
 //forge-utils.js
 const fetch = require('node-fetch');
 const FormData = require('form-data');
+var btoa = require('btoa');
 
 baseURL = "https://developer.api.autodesk.com";
 
@@ -22,7 +23,7 @@ async function getURNList(bucket, token) {
 		headers: { 'Authorization': `Bearer ${token}` }
 	});
 	const ress = await res.json();
-	const files = ress.items.map(i=> {return i.objectId});
+	const files = ress.items.map(i=> {return {name:i.objectKey, urn: btoa(i.objectId) }});
 	return files;
 }
 

@@ -25,7 +25,7 @@ program
     .command('download <urn>')
     .description(`download svf files to local folder, for viewing offline (on your own hosted service). Use viewsvfoffline.html to test`)
     .option('-a, --access-token [token]', 'Forge access token (can also be provided via FORGE_ACCESS_TOKEN env. var.)', '')
-    .option('-o, --output-folder [folder]', 'output folder', 'svfs')
+    .option('-o, --output-folder [folder]', 'output folder', '../../docs/svf')
     .action(function(urn, options) {
         console.log('download')
         downloadSVF(urn, options.accessToken, options.outputFolder + "/")
