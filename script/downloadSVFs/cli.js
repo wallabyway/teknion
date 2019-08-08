@@ -1,5 +1,6 @@
 const svf = require('./offlinesvf');
 const forge = require('./forge-utils');
+const layers = require('./layersToFrags');
 const program = require('commander');
 
 const version = "0.1";
@@ -33,6 +34,17 @@ program
             .catch(err => console.error(err));
     })
 
+
+program
+    .command('layers <urn> <guid>')
+    .description(`given urn and guid, this command retrieves layer set properties.  Basically provides the mapping between layer strings to dbIDs used for material swapping`)
+    .option('-a, --access-token [token]', 'Forge access token (can also be provided via FORGE_ACCESS_TOKEN env. var.)', '')
+    .action(function(urn, guid, options) {
+        console.log('layers')
+        layers.queryLayers(urn, guid, options.accessToken)
+            .then(res => console.log(res))
+            .catch(err => console.error(err));
+    })
 
 program
   .version(version, '-v, --version')
